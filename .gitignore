@@ -1,0 +1,7 @@
+*.idea/
+
+# OS X-related files
+.DS_Store
+
+node_modules
+bundles
