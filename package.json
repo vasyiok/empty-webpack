@@ -19,9 +19,14 @@
     "eslint": "^4.4.0",
     "eslint-loader": "^1.9.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "foundation-sites": "^6.4.2",
+    "jquery": "^3.2.1"
+  }
 }

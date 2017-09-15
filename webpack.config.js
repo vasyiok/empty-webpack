@@ -1,6 +1,8 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
 
+var sassConfigStr = '!sass-loader?sourceMap';
+
 module.exports = {
     entry: './source/js/main.es6',
     output: {
@@ -18,7 +20,8 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader?' + sassConfigStr),
+                exclude: '/node_modules/'
             }
         ]
 
@@ -28,12 +31,12 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
-      historyApiFallback: true,
-      hot: true,
-      inline: true,
-      progress: true,
-      port: 4000,
-      host: '127.0.0.1',
-      headers: {'Access-Control-Allow-Origin': '*'}
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        progress: true,
+        port: 4000,
+        host: '127.0.0.1',
+        headers: {'Access-Control-Allow-Origin': '*'}
     }
 };
